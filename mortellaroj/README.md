@@ -34,7 +34,7 @@ I also was just messing around with trying to make 3D visuals and then realized 
 ---
 
 ## ⚙️ Setup  
-You can put the path to the HTML file into your browser or you will need to download p5.js on vs code or any IDE for that matter as well as a live server add on to run it via the html file.   
+Go [here](https://github.com/JAMVPT/jamvpt.github.io.git), you can put the path to the HTML file into your browser, or download p5.js on vs code and the live server add-on to run it via the html file.   
 
 ---
 
