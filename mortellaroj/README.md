@@ -25,7 +25,7 @@
 ---
 
 ## 🎨 Title  
-### Solar System Explorer  
+### Orbital Drift  
 
 ---
 
@@ -36,7 +36,7 @@ I also was just messing around with trying to make 3D visuals and then realized 
 ---
 
 ## ⚙️ Setup  
-To play, go [here](https://jamvpt.github.io/mortellaroj/code/index.html), you can put the path to the HTML file into your browser, or download p5.js on vs code and the live server add-on to run it via the html file.   
+To play, go [here](https://jamvpt.github.io/mortellaroj/code/index.html), or downoad the files and put the path to the HTML file into your browser, or download p5.js including the live server add-on to run it via the HTML file.   
 
 ---
 
@@ -52,6 +52,7 @@ Things I could add:
     - Make the orbit display be affected by all the bodies and not just the one you are orbiting. (This is really noticable when orbiting earth/moon and mercury)
     - On a similar note the orbit that you spawn in gets effected by other bodies and therefore doesn't work
     - Add animations to the rocket
+    - Fix rocket flipping when velocity relative to parent goes through <0,0>
 - 🌎 Planet:  
     - Add surface scatter (Like rocks and trees)
     - Have an actual sky and not just the fog color
