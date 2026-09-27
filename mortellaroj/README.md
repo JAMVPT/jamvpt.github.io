@@ -4,6 +4,8 @@
 > A/D - Rotate Counter-Clockwise/Clockwise  
 > Space - Stop Rotating  
 > Scroll up/down - Zoom in/out  
+>
+> **Commands:**  
 > / + 0 - Teleport to orbit around The Sun  
 > / + 1 - Teleport to orbit around Mercury  
 > / + 2 - Teleport to orbit around Venus  
@@ -23,18 +25,18 @@
 ---
 
 ## 🎨 Title  
-Solar System Explorer  
+### Solar System Explorer  
 
 ---
 
 ## ✨ Description   
 I chose this concept because I enjoy space and thought it would be fun to make a game involving orbital mechanics.  
-I also was just messing around with trying to make 3D visuals and then realized it would be really cool to be able to land on the planets (and moon and sun) and explore.  
+I also was just messing around with trying to make 3D visuals and then realized it would be really cool to be able to land on the celestial bodies and explore.  
 
 ---
 
 ## ⚙️ Setup  
-Go [here](https://jamvpt.github.io/mortellaroj/code/index.html), you can put the path to the HTML file into your browser, or download p5.js on vs code and the live server add-on to run it via the html file.   
+To play, go [here](https://jamvpt.github.io/mortellaroj/code/index.html), you can put the path to the HTML file into your browser, or download p5.js on vs code and the live server add-on to run it via the html file.   
 
 ---
 
@@ -42,6 +44,9 @@ Go [here](https://jamvpt.github.io/mortellaroj/code/index.html), you can put the
 Things I could add:  
 - Allow adjusting of controls and settings like FOV
 - Show the controls in-game
+- Sound effects
+- Story
+- The ability to win/lose
 - ⭐ Space:
     - Add other moons, asteroids, and commets
     - Make the orbit display be affected by all the bodies and not just the one you are orbiting. (This is really noticable when orbiting earth/moon and mercury)
@@ -51,11 +56,15 @@ Things I could add:
     - Add surface scatter (Like rocks and trees)
     - Have an actual sky and not just the fog color
     - Show the sun while on the other planets
-    - Have the sun move (I tried and it didn't look good so I removed it. So implement it wo that it looks good)
+    - Have the sun move (I tried and it didn't look good so I removed it. So implement it so that it looks good)
     - Fix edge cases with triangle sorting (z-buffer)
     - Add a landing animation
     - Add water to earth
     - Have the planet curve down in the distance
     - Have the planet loop like a real planet
+    - Occulsion culling
 
-The largest challenge I faced was time/scope which is why the experience isn't very polished. Other than that this project did require me to learn alot like orbital physics including all the math in displayOrbit() (The white and cyan lines), 3D rendering, Collision detection in 3D, and how to program Perlin Noise.  
+The largest challenge I faced was time/scope which is why the experience isn't very polished.  
+Other than that this project did require me to learn alot like orbital physics including all the math in Planet's displayOrbit() function (The white and cyan lines in the space (2D) part), 3D rendering, Collision detection in 3D, and how to program Perlin Noise.  
+ 
+I enjoyed using p5js. The way I used it wasn't exactly inteded so I had to write my own systems (Like converting a triangle in 3D space to the screen, collision detection, and physics).  

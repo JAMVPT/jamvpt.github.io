@@ -1,11 +1,26 @@
+/**
+ * Width of the canvas
+ */
 var SCREEN_WIDTH;
+/**
+ * Height of the canvas
+ */
 var SCREEN_HEIGHT;
+/**
+ * Instance of the planet (3D) part of the experience
+ */
 var planetInstance;
+/**
+ * If the player is in the space (2D) part and not the planet (3D) part
+ */
 var isSpace;
+/**
+ * Instance of the space (2D) part of the experience
+ */
 var spaceInstance;
 
 /**
- * Class representing the space part of the experience
+ * Class representing the space (2D) part of the experience
  */
 class Space {
     /**
@@ -303,7 +318,7 @@ class Space {
 }
 
 /**
- * Class representing a player
+ * Class representing a player in the space (2D) part of the experience
  */
 class Player {
     /**
@@ -410,7 +425,7 @@ class Player {
 }
 
 /**
- * Class representing a celestial body
+ * Class representing a celestial body in the space (2D) part of the experience
  */
 class Body {
     /**
@@ -1615,7 +1630,7 @@ class Body {
 }
 
 /**
- * Class representing an instance of the planet part of the experience
+ * Class representing an instance of the planet (3D) part of the experience
  */
 class Planet {
     /**
@@ -1623,13 +1638,13 @@ class Planet {
      */
     FOV;
     /**
-     * Inverse focal length I believe
+     * Inverse slope of the vertical plane of the view frustum
      */
-    IFL;
+    ISVP;
     /**
-     * Focal length I believe
+     * Slope of the vertical plane of the view frustum
      */
-    FL;
+    SVP;
     /**
      * Z position in camera space that all triangle must be infront of to render
      */
@@ -1720,8 +1735,8 @@ class Planet {
      */
     constructor(FOV, bodyEnum) {
         this.FOV = FOV;
-        this.IFL = SCREEN_HEIGHT * tan((180 - this.FOV) * PI / 360);
-        this.FL = 1 / this.IFL;
+        this.ISVP = SCREEN_HEIGHT * tan((180 - this.FOV) * PI / 360);
+        this.SVP = 1 / this.ISVP;
         this.NEAR_PLANE = 0.1;
 
         this.SPEED = 6.3;
@@ -1856,11 +1871,11 @@ class Planet {
                                         
             let newTri = tris[i].translate(camPos, rotMat); // Changes to camera space
 
-            if (new AABB([newTri.v1, newTri.v2, newTri.v3]).isInView(this.FL, SCREEN_WIDTH, SCREEN_HEIGHT)) {
+            if (new AABB([newTri.v1, newTri.v2, newTri.v3]).isInView(this.SVP, SCREEN_WIDTH, SCREEN_HEIGHT)) {
                 if (newTri.v1.copy().sub(newTri.v2).cross(newTri.v1.copy().sub(newTri.v3)).dot(newTri.v1) < 0) { // If triangle is facing the camera
                     let correctedTris = newTri.corrected(this.NEAR_PLANE);
                     for (let j = 0; j < correctedTris.length; j++) {
-                        pQueue.enqueue(correctedTris[j].project(this.IFL), correctedTris[j].distance); // Changes to screen space
+                        pQueue.enqueue(correctedTris[j].project(this.ISVP), correctedTris[j].distance); // Changes to screen space
                     }
                 }
             }
@@ -2190,6 +2205,7 @@ class PriorityQueue {
      * Max heap containing all the objects
      */
     heap;
+
     /**
      * Initializes a priority queue
      */
@@ -2604,7 +2620,7 @@ class Color {
 }
 
 /**
- * Class representing an axis-aligned bounding box
+ * Class representing an axis-aligned bounding box (A rectangular prism where all the faces are along an axis)
  */
 class AABB {
     /**
@@ -2872,7 +2888,7 @@ class Triangle3D {
 
     /**
      * Projects the triangle to screen space
-     * @param {number} ifl Inverse focal length I believe
+     * @param {number} ifl Inverse slope of the vertical plane of the view frustum
      * @returns Triangle in screen space
      */
     project(ifl) {
