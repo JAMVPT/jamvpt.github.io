@@ -3030,7 +3030,7 @@ function mouseWheel(event) {
 }
 
 function setup() {
-    SCREEN_HEIGHT = windowHeight - 4;
+    SCREEN_HEIGHT = windowHeight;
     SCREEN_WIDTH = windowWidth;
     
     createCanvas(SCREEN_WIDTH, SCREEN_HEIGHT);
