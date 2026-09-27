@@ -141,7 +141,7 @@ class Space {
             ellipse(0, 0, 2 * semiMajorAxis, 2 * semiMinorAxis);
             pop();
         } else {
-            line(orbiter.pos.x, -orbiter.pos.y, orbiter.pos.x + orbiter.vel.x * 100, -orbiter.pos.y - orbiter.vel.y * 100); // I hope that 100 is large enough
+            line(orbiter.pos.x, -orbiter.pos.y, orbiter.pos.x + (orbiter.vel.x - orbited.vel.x) * 100, -orbiter.pos.y - (orbiter.vel.y - orbited.vel.y) * 100); // I hope that 100 is large enough
         }
     }
 

@@ -66,6 +66,6 @@ Things I could add:
     - Let the player slide along walls and not get stuck
 
 The largest challenge I faced was time/scope which is why the experience isn't very polished.  
-Other than that this project did require me to learn alot like orbital physics including all the math in Planet's displayOrbit() function (The white and cyan lines in the space (2D) part), 3D rendering, Collision detection in 3D, and how to program Perlin Noise.  
+Other than that this project did require me to learn alot like orbital physics including all the math in Space's displayOrbit() function (The white and cyan lines in the space (2D) part), 3D rendering, Collision detection in 3D, and how to program Perlin Noise.  
  
 I enjoyed using p5js. The way I used it wasn't exactly inteded so I had to write my own systems (Like converting a triangle in 3D space to the screen, collision detection, and physics).  
