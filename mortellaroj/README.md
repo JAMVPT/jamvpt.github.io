@@ -63,6 +63,7 @@ Things I could add:
     - Have the planet curve down in the distance
     - Have the planet loop like a real planet
     - Occulsion culling
+    - Let the player slide along walls and not get stuck
 
 The largest challenge I faced was time/scope which is why the experience isn't very polished.  
 Other than that this project did require me to learn alot like orbital physics including all the math in Planet's displayOrbit() function (The white and cyan lines in the space (2D) part), 3D rendering, Collision detection in 3D, and how to program Perlin Noise.  
