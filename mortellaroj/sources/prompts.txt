@@ -1,62 +1,75 @@
 AI Prompts: These are summarized due to either including code or being split into many different prompts
 
-Is there a way to optimize the rotation code.
+Is there a way to optimize this code [Old rotation code]
 
-Help debugging the collision logic
+Why doesn't this work [Part of old collision code]
 
-Help with the calculations to find the shape of the orbit.
+how to find the lengths of the semi-major and semi-minor axis in orbital mechanics with the relative velocity, relative distance, and masses
 
-Help with displaying the orbit shape.
+What is wrong with this code [Facts about the code that it couldn't know] [Old display code]
 
-Help with the calculation for orbital radians per second.
+How to offset the center so that the parent sits at the focus
 
-Generating the visuals for Saturn only using circles
-Change to not use any helper functions and use a quarter to a third the number of circles.
+How to get the radians per second of a circular orbit with the masses, and distance assuming the larger object is not effected by the smaller object
 
-Do the same for Jupiter and Neptune
+This is some basic code to display Saturn from a top view, improve it only using circles [Temporary code]
 
-Could you make a similar visual style on Uranus. Keep in mind that Uranus is on it's side, don't worry about only using circles for this one
+Don't use any helper function
 
-Could you follow a similar style for mercury, no need to only use circles but it should be mainly circles. 
-Add 5 more craters and make sure there ar craters near the edge of the planet
+Simplify the number of circles used to be a quarter to a third of the number
 
-Could you do the same for Venus and The Sun
+Do a similar thing for jupiter and neptune
 
-Could you do the same with mars. make sure to get the ice on the north pole
+Make a similar visual style on Uranus. Keep in mind that Uranus is on it's side, don't worry about only using circles for this one
 
-Could you add code for an atmosphere on Venus
+Follow a similar style for mercury, no need to only use circles but it should be mainly circles.
 
-Could you create the moon
-Could you show the moon from the north pole instead of the close side
+Add 5 more craters. Make sure there are craters near the edge of the planet. 
 
-Could you make the earth
+Do the same for Venus and The Sun
 
-Could you give me code for some lines to add to jupiter, saturn, and neptune like what is on venus
+Do the same with mars. Make sure to get the ice on the north pole
 
-Could you generate code segments to some variation to saturns rings and add the hexagon at the north pole of saturn
-Could you change the hexagon to be the 2012-2013 colors.
+Make the code for an almost transparent circle as an atmosphere for venus
 
-Could you redo hexLayers to make it more the teal color like in the image
+Create the moon
+
+Show the moon from the north pole instead of the close side
+
+Make the earth
+
+Give code for some lines to add to jupiter, saturn, and neptune like what is on venus. I removed the great red spot and the dark spot on jupiter and neptune so don't bother dodging them
+
+Generate code segments to some variation to saturns rings and add the hexagon at the north pole of saturn
+
+When drawing the rings, rotate(-this.angle) is already called which rotates the planet to the correct angle. Re-generate the ring code accounting for the rotation already applied (this.angle is not bounded between 0 and 2pi). Also change the hexagon to be the 2012-2013 colors
+
+Redo hexLayers to make it more the teal color like in the image [Image of saturns hexagon]
 
 I removed the sun code for the sun spots and prominences. Is there a different way to add detail to the sun
 
-Could you rewrite the swirl code to add more swirls and like for saturn the sun is rotated by rotate(-this.angle). You can rotate the swirls by some multiple of this.angle to add motion
+Rewrite the swirl code to add more swirls and like for saturn the sun is rotated by rotate(-this.angle). Rotate the swirls by some multiple of this.angle to add motion
 
-Could you add swirls (lines) to Uranus where the planets rotation along it's axis is -this.angle
+Add swirls (lines) to Uranus where the planets rotation along it's axis is -this.angle
 
-The swirl lines don't end at the correct place, can you fix this
+This is the code for Uranus, fix the lines ending at the correct place. [Old uranus code]
 
-Could you give a ground color for mars in rgb from 0-255
+Give a ground color for mars in rgb from 0-255
 
-Could you give a fog color as well
+Give a fog color as well
 
 There is a perlin noise generator with layers of different scales and weights. Can you give me an array of scales for each layer of Perlin noise (One unit in the scale is 10x the width of the player and 5x the height). The array of weights has the strength from 0-1 of the layer in scales with the same index. The weights array should sum to 1. Also give a maximum height of the terrain which is in units 1/10th the size of the perlin noise units. Could you give these numbers for the surface of mars
 
-Could you give all these values for Venus, Mercury, and the surface of the Sun
+Give all these values for venus
 
-Could you give the values for earth. Also could you give the values for gravity for all the previous celestial bodies and any future ones where earth is -20
+Do the same for mercury. Also the values for max height should be multiplied by 15. Mars would be 150 and venus 90
 
-Could you give the values for the moon, jupiter, saturn, uranus, and neptune. Like the sun, take creative liberty at what the gas giants would look like
+Do this for the surface of the sun
 
-How would you make a function that takes in 2 numbers and deterministically returns a random number
+Give the values for earth. Also give the values for gravity for all the previous celestial bodies and any future ones where earth is -20
+
+Give the values for the moon, jupiter, saturn, uranus, and neptune. Like the sun, take creative liberty at what the gas giants would look like
+
+How to make a function that takes in 2 numbers and deterministically returns a random number
+
 This is in Javascript and is being used for generating perlin noise based on the x and z coordinates
